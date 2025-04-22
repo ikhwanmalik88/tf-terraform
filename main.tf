@@ -8,11 +8,11 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-southeast-1b"
+  region = "ap-southeast-1"
 }
 
 ## Create new EC2 Instance
-resource ""aws_instance"" "HiEC2" {
+resource "aws_instance" "HiEC2" {
   ami               = "ami-01938df366ac2d954"
   instance_type     = "t2.micro"
 
@@ -22,3 +22,7 @@ resource ""aws_instance"" "HiEC2" {
 }
 
 # Output public IP
+
+output "server_public_ip" {
+  value = aws_eip.one.public_ip
+}
