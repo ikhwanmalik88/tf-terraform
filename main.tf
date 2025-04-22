@@ -19,7 +19,6 @@ resource "aws_instance" "HiEC2" {
   tags = {
     Name = "EC2Instance"
   }
-}
 
 # Output public IP
 
