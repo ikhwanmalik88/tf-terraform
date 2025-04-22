@@ -23,7 +23,7 @@ resource "aws_instance" "HiEC2" {
 
 # Output public IP
 
-output "server_public_ip" {
+output "Instance_public_ip" {
   value = aws_eip.HiEC2.public_ip
 }
 
